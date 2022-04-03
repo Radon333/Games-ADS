@@ -1,0 +1,16 @@
+body{
+    margin: 0%;
+}
+.container{
+    height:200vh;
+    margin:0
+    
+}
+.viewone{
+    height: 100vh;
+    background-image: linear-gradient(#00deb1,#fc4273);
+    
+}
+.viewtwo{
+    height: 100vh;
+}
