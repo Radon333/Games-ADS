@@ -19,8 +19,9 @@ function Home() {
     <div className={homestyles.container}>
       <div className={homestyles.viewone}>
         <br />
-
+        
         <div style={{paddingTop:"20vh", textAlign: "center" }}>
+        <motion.div initial={{ y:-300 }} animate={{y:0}} transition={{delay:0.5,duration:0.5}}>
           <h1
             style={{
               color: "#fc4273",
@@ -29,6 +30,12 @@ function Home() {
           >
             GameTree
           </h1>
+          </motion.div>
+          <motion.div 
+                initial={{opacity:0}}
+                animate={{opacity:1}}
+                transition={{delay:1,duration:2}}
+            >
           <p style={{ textAlign: "center", color: "white", fontSize: "x-large" }}>
             Algorithm based games for learning
           </p>
@@ -41,6 +48,7 @@ function Home() {
           >
             Select Games to play
           </Button>
+          </motion.div>
 
         </div>
       </div>
@@ -99,7 +107,7 @@ function Home() {
                       style={{ textDecoration: "none" }}
                       size="large"
                       variant="contained"
-                      color="warning"
+                      color="success"
                     >
                       Play Now
                     </Button>
@@ -108,7 +116,7 @@ function Home() {
               </Card>
             </Grid>
             <Grid item md={4} sm={12} lg={4}>
-              <Card sx={{ maxWidth: 320 }}>
+              <Card style={{ background: "#faf0ca" }} sx={{ maxWidth: 320 }}>
                 <CardMedia
                   component="img"
                   height="250"
@@ -140,7 +148,7 @@ function Home() {
               </Card>
             </Grid>
             <Grid item md={4} sm={12} lg={4}>
-              <Card sx={{ maxWidth: 320 }}>
+              <Card style={{ background: "#faf0ca" }} sx={{ maxWidth: 320 }}>
                 <CardMedia
                   component="img"
                   height="250"
