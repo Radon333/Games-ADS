@@ -12,27 +12,70 @@ import connectfouricon from "../images/connect-four.png";
 import Box from "@mui/material/Box";
 import { Link } from "react-router-dom";
 import homestyles from "./home.module.css";
+import {motion} from "framer-motion";
 
 function Home() {
   return (
     <div className={homestyles.container}>
       <div className={homestyles.viewone}>
-        <h1 style={{textAlign:"center"}} >Games ADSA</h1>
-        <Grid container spacing={1}>
-          <Grid item xs={12} sm={12} md={6} lg={6}>
-            <div style={{display: "flex",justifyContent:"center",alignItems:"center",textAlign:"center"}}><h1>ReSpawn</h1></div>
-          </Grid>
-          <Grid item xs={12} sm={12} md={6} lg={6}>
-            <h1 style={{textAlign:"center"}}>ReSpawn</h1>
-          </Grid>
-        </Grid>
+        <br />
+
+        <div style={{paddingTop:"20vh", textAlign: "center" }}>
+          <h1
+            style={{
+              color: "#fc4273",
+              fontSize: "5rem",
+            }}
+          >
+            GameTree
+          </h1>
+          <p style={{ textAlign: "center", color: "white", fontSize: "x-large" }}>
+            Algorithm based games for learning
+          </p>
+          <Button
+            href="#scrollhere"
+            style={{ textDecoration: "none" }}
+            size="large"
+            variant="contained"
+            color="primary"
+          >
+            Select Games to play
+          </Button>
+
+        </div>
       </div>
-      <Box sx={{ flexGrow: 1 }} style={{ marginLeft: "10px" }}>
+      <Box
+        sx={{ flexGrow: 1 }}
+        style={{
+          display: "flex",
+          textAlign: "center",
+          marginLeft: "10px",
+          justifyContent: "center",
+        }}
+      >
         <div className={homestyles.viewtwo}>
-          <h2 style={{textAlign:"center"}}>Select the game</h2>
-          <Grid container spacing={2} columns={12}>
-            <Grid item md={4} sm={12} lg={4}>
-              <Card style={{background:"#faf0ca"}}sx={{ maxWidth: 320 }}>
+          <h2
+            style={{
+              textAlign: "center",
+              fontSize: "xx-large",
+              color: "#cb03df",
+            }}
+          >
+            Select the game
+          </h2>
+          <br />
+          <Grid
+            style={{
+              display: "flex",
+              textAlign: "center",
+              justifyContent: "center",
+            }}
+            container
+            spacing={2}
+            columns={12}
+          >
+            <Grid id="scrollhere" item md={4} sm={12} lg={4}>
+              <Card style={{ background: "#faf0ca" }} sx={{ maxWidth: 320 }}>
                 <CardMedia
                   component="img"
                   height="250"
@@ -41,21 +84,23 @@ function Home() {
                 />
                 <CardContent>
                   <Typography gutterBottom variant="h5" component="div">
-                    Tic Tac Toe
+                    Unbeatable Tic Tac Toe
                   </Typography>
                   <Typography variant="body2" color="text.secondary">
-                    Tic-tac-toe is played on a three-by-three grid by two
-                    players, who alternately place the marks X and O in one of
-                    the nine spaces in the grid.The player with the first three
-                    in a row wins. Our Unbeatable AI uses Alpha Beta Pruning
-                    based on Minimax Algorithm to find the best move.
+                    The Classic Tic Tac Toe Game is here,but this one with an
+                    Unbeatable AI opponent. Try the game and see how you do.
                   </Typography>
                 </CardContent>
                 <CardActions
                   style={{ display: "flex", justifyContent: "center" }}
                 >
                   <Link to="/tictactoe">
-                    <Button size="large" variant="contained" color="warning">
+                    <Button
+                      style={{ textDecoration: "none" }}
+                      size="large"
+                      variant="contained"
+                      color="warning"
+                    >
                       Play Now
                     </Button>
                   </Link>
@@ -72,18 +117,23 @@ function Home() {
                 />
                 <CardContent>
                   <Typography gutterBottom variant="h5" component="div">
-                    Sudoku
+                    Sudoku with Solver
                   </Typography>
                   <Typography variant="body2" color="text.secondary">
-                    Lizards are a widespread group of squamate reptiles, with
-                    over 6,000 species, ranging across all continents except
-                    Antarctica
+                    The number placing puzzle with three different difficulty
+                    modes. You can try use solver to help you out solving the
+                    puzzle.
                   </Typography>
                 </CardContent>
                 <CardActions
                   style={{ display: "flex", justifyContent: "center" }}
                 >
-                  <Button size="large" variant="contained" color="success">
+                  <Button
+                    href="https://gametree-respawn-sudoku.netlify.app/"
+                    size="large"
+                    variant="contained"
+                    color="success"
+                  >
                     Play Now
                   </Button>
                 </CardActions>
@@ -99,18 +149,22 @@ function Home() {
                 />
                 <CardContent>
                   <Typography gutterBottom variant="h5" component="div">
-                    Connect Four
+                    Connect Four against AI
                   </Typography>
                   <Typography variant="body2" color="text.secondary">
-                    Lizards are a widespread group of squamate reptiles, with
-                    over 6,000 species, ranging across all continents except
-                    Antarctica
+                    Connect Four startegy game with against AI opponent with
+                    three difficulty levels. Can you beat the the AI?
                   </Typography>
                 </CardContent>
                 <CardActions
                   style={{ display: "flex", justifyContent: "center" }}
                 >
-                  <Button  size="large" variant="contained" color="success">
+                  <Button
+                    href="https://gametree-respawn-connectfour.netlify.app/"
+                    size="large"
+                    variant="contained"
+                    color="success"
+                  >
                     Play Now
                   </Button>
                 </CardActions>
