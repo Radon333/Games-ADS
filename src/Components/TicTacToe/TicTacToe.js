@@ -11,14 +11,19 @@ import Button from "@mui/material/Button";
 
 import { Link } from "react-router-dom";
 
+import useSound from 'use-sound';
+import jump from '../Audio/jump.mp3';
+import start from "../Audio/start.mp3";
+
 function Square(props) {
+  const [playJump] = useSound(jump);
   const squareClass =
     "square " +
     (props.value ? "" : "hoverable ") +
     (props.value === human ? human : computer);
 
   return (
-    <button className={squareClass} onClick={props.onClick}>
+    <button className={squareClass} onClick={props.onClick} >
       <span>{props.value}</span>
     </button>
   );
@@ -135,7 +140,7 @@ export default class Game extends React.Component {
     return (
       <div className="game">
         <br />
-        <motion.div initial={{ x:-875}} animate={{x:0}} transition={{type:"spring",stiffness: 175,delay:1,duration:1}}>
+        <motion.div initial={{ x:-875}} animate={{x:0}} transition={{type:"spring",stiffness: 175,delay:0.5,duration:1}}>
         <div className="status">{status}</div>
         <h1 style={{ color: "wheat" }}>Human: X &nbsp; AI: 0</h1>
         </motion.div>
@@ -143,7 +148,7 @@ export default class Game extends React.Component {
         <motion.div 
                 initial={{opacity:0}}
                 animate={{opacity:1}}
-                transition={{delay:1,duration:2}}
+                transition={{delay:0.5,duration:1.5}}
             >
         <div className="game-board">
           <Board
