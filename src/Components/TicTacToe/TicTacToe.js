@@ -11,12 +11,10 @@ import Button from "@mui/material/Button";
 
 import { Link } from "react-router-dom";
 
-import useSound from 'use-sound';
-import jump from '../Audio/jump.mp3';
-import start from "../Audio/start.mp3";
+
+
 
 function Square(props) {
-  const [playJump] = useSound(jump);
   const squareClass =
     "square " +
     (props.value ? "" : "hoverable ") +
