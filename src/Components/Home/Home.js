@@ -28,7 +28,7 @@ function Home() {
               fontSize: "5rem",
             }}
           >
-            GameTree
+            Game City
           </h1>
           </motion.div>
           <motion.div 
@@ -125,7 +125,7 @@ function Home() {
                 />
                 <CardContent>
                   <Typography gutterBottom variant="h5" component="div">
-                    Sudoku with Solver
+                    Sudoku
                   </Typography>
                   <Typography variant="body2" color="text.secondary">
                     The number placing puzzle with three different difficulty

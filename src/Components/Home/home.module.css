@@ -1,20 +1,19 @@
-*{
-    scroll-behavior: smooth;
+a {
+  text-decoration: none;
 }
-body{
-    margin: 0%;
-    
+* {
+  scroll-behavior: smooth;
 }
-.container{
-    margin:0;
-    
+body {
+  margin: 0%;
 }
-.viewone{
-    color:#0d1117;
-    height:100vh;
-
-    
+.container {
+  margin: 0;
 }
-.viewtwo{
-    background: #0d1117;
+.viewone {
+  color: #0d1117;
+  height: 100vh;
+}
+.viewtwo {
+  background: #0d1117;
 }

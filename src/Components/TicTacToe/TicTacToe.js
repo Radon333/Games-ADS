@@ -5,7 +5,7 @@ import { isFull } from "./isFull.js";
 import { nextMove } from "./nextMove.js";
 import { human } from "./human.js";
 import { computer } from "./computer.js";
-
+import {motion} from 'framer-motion';
 import "./tictactoe.css";
 import Button from "@mui/material/Button";
 
@@ -135,9 +135,16 @@ export default class Game extends React.Component {
     return (
       <div className="game">
         <br />
+        <motion.div initial={{ x:-875}} animate={{x:0}} transition={{type:"spring",stiffness: 175,delay:1,duration:1}}>
         <div className="status">{status}</div>
         <h1 style={{ color: "wheat" }}>Human: X &nbsp; AI: 0</h1>
+        </motion.div>
         <br />
+        <motion.div 
+                initial={{opacity:0}}
+                animate={{opacity:1}}
+                transition={{delay:1,duration:2}}
+            >
         <div className="game-board">
           <Board
             squares={squares}
@@ -157,6 +164,7 @@ export default class Game extends React.Component {
             </Button>
           </Link>
         </div>
+        </motion.div>
       </div>
     );
   }
