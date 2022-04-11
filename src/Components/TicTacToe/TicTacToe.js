@@ -8,22 +8,27 @@ import { computer } from "./computer.js";
 import {motion} from 'framer-motion';
 import "./tictactoe.css";
 import Button from "@mui/material/Button";
-
+import useSound from 'use-sound';
+import coin from '../Audio/coin.mp3';
 import { Link } from "react-router-dom";
 
-import useSound from 'use-sound';
-import jump from '../Audio/jump.mp3';
-import start from "../Audio/start.mp3";
+
+
 
 function Square(props) {
-  const [playJump] = useSound(jump);
+  const [playCoin] = useSound(coin);
+  function doit()
+  {
+    props.onClick();
+    playCoin();
+  }
   const squareClass =
     "square " +
     (props.value ? "" : "hoverable ") +
     (props.value === human ? human : computer);
 
   return (
-    <button className={squareClass} onClick={props.onClick} >
+    <button className={squareClass} onClick={doit} >
       <span>{props.value}</span>
     </button>
   );
